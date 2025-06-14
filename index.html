@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cantinho das Bonecas - Artesanatos Especiais</title>
+    <meta name="description" content="Artesanatos exclusivos do Cantinho das Bonecas. Peças únicas com amor e dedicação em cada detalhe.">
+    <meta name="keywords" content="artesanato, bonecas de pano, decoração, peças artesanais, Cantinho das Bonecas">
+    
+    <!-- Pré-conexão para melhor performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Favicon e ícones para todos os dispositivos -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- CSS moderno com variáveis e animações suaves -->
+    <style>
+        :root {
+            --primary:   #7B4AE2;
+            --primary-light: rgba(123, 74, 226, 0.1);
+            --secondary: #FF2D55;
+            --accent: #00C4CC;
+            --dark: #0F172A;
+            --light: #fdfdfd;
+            --gray: #94A3B8;
+            --white: #FFFFFF;
+            --black: #000000;
+            --whatsapp: #25D366;
+            --instagram: #E1306C;
+            --facebook: #3b5998;
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.05);
+            --shadow-xl: 0 20px 40px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.05);
+            --radius-sm: 8px;
+            --radius-md: 12px;
+            --radius-lg: 16px;
+            --radius-full: 9999px;
+        }
+
+        /* Reset moderno e estilos base */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        body {
+            font-family: 'Inter', -apple-gen, Ubuntuf;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        ul, ol {
+            list-style: none;
+        }
+
+        /* Tipografia moderna */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: #5a1e6d;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+        }
+
+        h3 {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+            font-size: clamp(1rem, 1.1vw, 1.125rem);
+            line-height: 1.7;
+        }
+
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Componentes reutilizáveis */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            bottom: -1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: var(--radius-full);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 2rem;
+            border-radius: var(--radius-full);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            background-color: var(--primary);
+            opacity: 0.9;
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background-color: transparent;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: var(--white);
+        }
+
+        .btn-instagram {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+            color: var(--white);
+        }
+
+        .btn-facebook {
+            background-color: var(--facebook);
+            color: var(--white);
+        }
+
+        /* Header moderno com glass morphism */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1.5rem 0;
+            transition: var(--transition);
+            background-color: rgb(241, 229, 241);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        header.scrolled {
+            padding: 1rem 0;
+            box-shadow: var(--shadow-sm);
+            background-color: rgba(248, 250, 252, 0.95);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            position: relative;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -4px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            z-index: 1001;
+        }
+
+        /* Hero section com efeito parallax - MODIFICADO */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(135deg, rgba(123, 74, 226, 0.1), rgba(255, 45, 85, 0.05));
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://i.ibb.co/Wbrpc91/Logotipo-Juracema-neumann.jpg') center/cover no-repeat fixed;
+            opacity: 0.9;
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            position: relative;
+            z-index: 1;
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards 0.3s;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            margin-bottom: 2.5rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards 0.5s;
+        }
+
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s ease forwards 0.7s;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 5%;
+            bottom: 10%;
+            width: 40%;
+            max-width: 500px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeUp 0.8s ease forwards 0.9s;
+            border: 8px solid var(--white);
+        }
+
+        /* Sobre */
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .about-image {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            transform: translateX(-50px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .about-image img {
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Galeria moderna com grid e hover effects */
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1/1;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transform: scale(0.95);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            color: var(--white);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-item-overlay {
+            opacity: 1;
+        }
+
+        .gallery-item-overlay h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Lightbox moderno - MODIFICADO PARA MOBILE */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 23, 42, 0.95);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition);
+            touch-action: pan-y;
+        }
+
+        .lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            text-align: center;
+        }
+
+        .lightbox-content img {
+            max-height: 80vh;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-xl);
+            -webkit-user-drag: none;
+            user-select: none;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2001;
+        }
+
+        .lightbox-close:hover {
+            color: var(--secondary);
+            background: rgba(0,0,0,0.7);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-nav button {
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-full);
+            background-color: rgba(255, 255, 255, 0.2);
+            color: var(--white);
+            font-size: 1.25rem;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-nav button:hover {
+            background-color: var(--primary);
+        }
+
+        /* Contato */
+        .contact-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        /* Rodapé moderno com onda SVG */
+        footer {
+            position: relative;
+            background: linear-gradient(135deg, var(--primary), var(--dark));
+            color: var(--white);
+            padding-top: 8rem;
+            overflow: hidden;
+        }
+
+        .footer-wave {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23ffffff'/%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' fill='%23ffffff'/%3E%3C/svg%3E");
+            background-size: cover;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            padding-bottom: 4rem;
+        }
+
+        .footer-col h3 {
+            position: relative;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 0;
+        }
+
+        .footer-col p, .footer-col li {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--black);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-full);
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--secondary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.875rem;
+            opacity: 0.8;
+        }
+
+        /* Animações */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efeitos de scroll */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsividade */
+        @media (max-width: 1024px) {
+            .hero-image {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 300px;
+                height: 100vh;
+                background-color: var(--light);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2rem;
+                transition: var(--transition);
+                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: 0 auto;
+                padding-top: 6rem;
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            .btn-container {
+                justify-content: center;
+            }
+
+            .hero-image {
+                position: relative;
+                right: auto;
+                bottom: auto;
+                width: 80%;
+                margin: 2rem auto 0;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .about-image {
+                order: -1;
+                margin: 0 auto;
+                max-width: 500px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-col h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            /* Ajustes específicos para o lightbox no mobile */
+            .lightbox-content img {
+                max-height: 60vh;
+            }
+            
+            .lightbox-close {
+                top: 15px;
+                right: 15px;
+                font-size: 1.25rem;
+                width: 35px;
+                height: 35px;
+            }
+            
+            .lightbox-nav button {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                position: fixed;
+                bottom: 20px;
+            }
+            
+            .lightbox-nav button:first-child {
+                left: 20px;
+            }
+            
+            .lightbox-nav button:last-child {
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section {
+                padding: 4rem 0;
+            }
+
+            .btn-container {
+                flex-direction: column;
+            }
+
+            .gallery-container {
+                grid-template-columns: 1fr;
+            }
+
+            .lightbox-content img {
+                max-height: 50vh;
+            }
+        }
+    </style>
+    
+    <!-- Fontes otimizadas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">Cantinho<span>dasBonecas</span></a>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bonecas artesanais feitas com <span class="text-gradient">amor</span> e <span class="text-gradient">dedicação</span></h1>
+                <p>No Cantinho das Bonecas, cada criação é única e especial, feita à mão com materiais de alta qualidade para encantar crianças e colecionadores.</p>
+                <div class="btn-container">
+                    <a href="#galeria" class="btn btn-primary">
+                        <i class="fas fa-images"></i> Ver Trabalhos
+                    </a>
+                    <a href="#contato" class="btn btn-secondary">
+                        <i class="fas fa-shopping-cart"></i> Encomendar
+                    </a>
+                </div>
+            </div>
+            
+            <img src="https://i.ibb.co/M5S0zC6b/481292981-674252064948257-160081862649463446-n.jpg" alt="Bonecas artesanais" class="hero-image" loading="lazy">
+        </div>
+    </section>
+    
+    <!-- Sobre -->
+    <section class="section" id="sobre">
+        <div class="container">
+            <h2 class="section-title">Sobre Nós</h2>
+            
+            <div class="about-content">
+                <div class="about-text animate-on-scroll">
+                    <h3>Transformando materiais em arte</h3>
+                   <p>No Cantinho das Bonecas, transformamos sonhos em arte através do nosso trabalho artesanal!</p>
+
+<p>Cada boneca nasce da nossa paixão por transformar materiais simples em verdadeiros tesouros. Combinando técnicas tradicionais com um toque moderno, criamos peças únicas que encantam e atravessam gerações.</p>
+
+<p>Elaboradas completamente à mão, nossas bonecas recebem atenção especial em cada detalhe. Mais do que produtos, são criações com personalidade própria, onde linhas, tecidos e cores se unem para contar histórias emocionantes.</p>
+
+<p>Aqui, não fazemos simples bonecas criamos companheiras de vida, repletas de amor em cada ponto e costura.</p>
+                </div>
+                
+                <div class="about-image animate-on-scroll">
+                    <img src="https://i.ibb.co/9kZJbFTz/483520882-676249771415153-7035921259196385307-n.jpg" alt="Cantinho das Bonecas" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Galeria -->
+    <section class="section gallery" id="galeria">
+        <div class="container">
+            <h2 class="section-title">Nossas Criações</h2>
+            
+            <div class="gallery-container">
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://i.ibb.co/gLd7dD6t/30442573-598707397153062-5100383516378529792-n.jpg" alt="Porta pano de prato" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h3>Porta pano de prato</h3>
+                        <p>Clique para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://i.ibb.co/KjFpm7xf/30442961-598707303819738-7578339634808094720-n.jpg" alt="Decoração para Sala ou banheiro" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h3>Decoração para Sala ou banheiro</h3>
+                        <p>Clique para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://i.ibb.co/KpdC7tfv/482221549-674252061614924-8977492383106295716-n.jpg" alt="Boneca com vestido vermelho" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h3>Boneca com vestido vermelho</h3>
+                        <p>Clique para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://i.ibb.co/9kZJbFTz/483520882-676249771415153-7035921259196385307-n.jpg" alt="Decorativo de ambientes" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h3>Decorativo de ambientes</h3>
+                        <p>Clique para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://i.ibb.co/jKHtWwZ/485003732-679816124391851-4956526791844160248-n.jpg" alt="Decoração" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h3>Decoração</h3>
+                        <p>Clique para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://i.ibb.co/wNshvYMz/485168266-683798910660239-8731142173697960555-n.jpg" alt="Bonecas personalizadas" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h3>Bonecas personalizadas</h3>
+                        <p>Clique para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://i.ibb.co/RpnFfP6S/489697051-3026493494174229-8538385934559049708-n.jpg" alt="Decoração Natalina" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h3>Decoração de cozinha </h3>
+                        <p>Clique para ampliar</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://i.ibb.co/8gXJ5Gh4/485803172-683286077378189-2492603176058007886-n.jpg" alt="Decoração Natalina" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h3>Decoração Natalina</h3>
+                        <p>Clique para ampliar</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item animate-on-scroll">
+                    <img src="https://i.ibb.co/svGLg3zZ/489031429-3026288027528109-3033823443315993848-n.jpg" alt="Decoração para banheiros" loading="lazy">
+                    <div class="gallery-item-overlay">
+                        <h3>Decoração para banheiros</h3>
+                        <p>Clique para ampliar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Lightbox -->
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-nav">
+            <button><i class="fas fa-chevron-left"></i></button>
+            <button><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="lightbox-content">
+            <img src="" alt="">
+        </div>
+    </div>
+    
+    <!-- Contato -->
+    <section class="section" id="contato">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Faça sua Encomenda</h2>
+                <h3>Entre em contato pelas redes sociais</h3>
+                
+                <div class="contact-buttons">
+                    <a href="https://wa.me/5541999256756" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    
+                    <a href="https://www.instagram.com/juracemaneumann/" class="btn btn-instagram" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    
+                    <a href="https://www.facebook.com/profile.php?id=100070904088108" class="btn btn-facebook" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-f"></i> Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-wave"></div>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Cantinho das Bonecas</h3>
+                    <p>Bonecas artesanais feitas à mão com amor e dedicação. Cada peça conta uma história única.</p>
+                    
+                    <div class="social-links">
+                        <a href="https://wa.me/5541999256756" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/juracemaneumann/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100070904088108" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#galeria">Galeria</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Informações</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Colombo, Paraná</p>
+                    <p><i class="fas fa-phone"></i> (41) 99925-6756</p>
+                    <p><i class="fas fa-envelope"></i> ju.clbo@gmail.com </p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Cantinho das Bonecas. Todos os direitos reservados.</p>
+                <P>Desenvolvido por <a href="https://portifoliogeovani.netlify.app/" target="_blank">Geovani Neumann</a></P>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts otimizados -->
+    <script>
+        // Menu Mobile
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        const header = document.getElementById('header');
+        
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.innerHTML = navLinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Header Scroll Effect
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 100);
+        });
+        
+        // Animações ao rolar
+        const animateElements = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            const windowHeight = window.innerHeight;
+            const triggerPoint = windowHeight * 0.85;
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                
+                if (elementTop < triggerPoint) {
+                    element.classList.add('animated');
+                }
+            });
+        };
+        
+        // Lightbox Galeria - VERSÃO CORRIGIDA PARA MOBILE
+        const initLightbox = () => {
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.querySelector('.lightbox');
+            const lightboxImg = document.querySelector('.lightbox-content img');
+            const lightboxClose = document.querySelector('.lightbox-close');
+            const lightboxPrev = document.querySelector('.lightbox-nav button:first-child');
+            const lightboxNext = document.querySelector('.lightbox-nav button:last-child');
+            
+            let currentImageIndex = 0;
+            const images = Array.from(galleryItems).map(item => 
+                item.querySelector('img').src
+            );
+            
+            // Função para mostrar imagem atual
+            const showImage = (index) => {
+                currentImageIndex = index;
+                lightboxImg.src = images[currentImageIndex];
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+            
+            // Adiciona evento de clique aos itens da galeria
+            galleryItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    showImage(index);
+                });
+            });
+            
+            // Função para fechar o lightbox
+            const closeLightbox = () => {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            };
+            
+            // Função para mostrar imagem anterior
+            const showPrevImage = () => {
+                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+                lightboxImg.src = images[currentImageIndex];
+            };
+            
+            // Função para mostrar próxima imagem
+            const showNextImage = () => {
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                lightboxImg.src = images[currentImageIndex];
+            };
+            
+            // Event listeners
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', showPrevImage);
+            lightboxNext.addEventListener('click', showNextImage);
+            
+            // Fechar ao clicar fora da imagem
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) {
+                    closeLightbox();
+                }
+            });
+            
+            // Navegação por teclado
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+                
+                switch(e.key) {
+                    case 'Escape':
+                        closeLightbox();
+                        break;
+                    case 'ArrowLeft':
+                        showPrevImage();
+                        break;
+                    case 'ArrowRight':
+                        showNextImage();
+                        break;
+                }
+            });
+            
+            // Navegação por swipe em dispositivos touch
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            lightbox.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+            
+            lightbox.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, {passive: true});
+            
+            const handleSwipe = () => {
+                if (!lightbox.classList.contains('active')) return;
+                
+                const difference = touchStartX - touchEndX;
+                if (difference > 50) { // Swipe para esquerda
+                    showNextImage();
+                } else if (difference < -50) { // Swipe para direita
+                    showPrevImage();
+                }
+            };
+        };
+
+        // Atualizar ano no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Inicializar tudo quando o DOM estiver pronto
+        document.addEventListener('DOMContentLoaded', () => {
+            animateElements();
+            initLightbox();
+            
+            // Observar elementos para animação ao rolar
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                observer.observe(el);
+            });
+        });
+        
+        // Disparar animações ao rolar
+        window.addEventListener('scroll', animateElements);
+    </script>
+</body>
+</html>
