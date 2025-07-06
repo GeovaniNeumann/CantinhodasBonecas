@@ -3,628 +3,974 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantinho das Bonecas - Artesanatos Especiais</title>
-    <meta name="description" content="Artesanatos exclusivos do Cantinho das Bonecas. Peças únicas com amor e dedicação em cada detalhe.">
-    <meta name="keywords" content="artesanato, bonecas de pano, decoração, peças artesanais, Cantinho das Bonecas">
-    
-    <!-- Pré-conexão para melhor performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Favicon e ícones para todos os dispositivos -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    
-    <!-- CSS moderno com variáveis e animações suaves -->
+    <title>Cantinho das Bonecas - Juracema Neumann</title>
+    <meta name="description" content="Artesanatos e decoração únicos. Bonecas artesanais feitas com amor e carinho pela Juracema Neumann.">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary:   #7B4AE2;
-            --primary-light: rgba(123, 74, 226, 0.1);
-            --secondary: #FF2D55;
-            --accent: #00C4CC;
-            --dark: #0F172A;
-            --light: #fdfdfd;
-            --gray: #94A3B8;
-            --white: #FFFFFF;
-            --black: #000000;
-            --whatsapp: #25D366;
-            --instagram: #E1306C;
-            --facebook: #3b5998;
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.1), 0 5px 10px rgba(0,0,0,0.05);
-            --shadow-xl: 0 20px 40px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.05);
-            --radius-sm: 8px;
-            --radius-md: 12px;
-            --radius-lg: 16px;
-            --radius-full: 9999px;
-        }
-
-        /* Reset moderno e estilos base */
-        *,
-        *::before,
-        *::after {
+        /* Reset e configurações básicas */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-            line-height: 1.6;
+        :root {
+            --primary-color: #d4a5a5;
+            --secondary-color: #f4e4e4;
+            --accent-color: #b8898b;
+            --dark-color: #2c2c2c;
+            --light-color: #ffffff;
+            --text-color: #333333;
+            --text-light: #9b9999;
+            --gradient-primary: linear-gradient(135deg, #d4a5a5 0%, #f4e4e4 100%);
+            --gradient-secondary: linear-gradient(135deg, #b8898b 0%, #d4a5a5 100%);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --border-radius: 15px;
+            --transition: all 0.3s ease;
         }
 
         body {
-            font-family: 'Inter', -apple-gen, Ubuntuf;
-            color: var(--dark);
-            background-color: var(--light);
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        button {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-family: inherit;
-            transition: var(--transition);
-        }
-
-        ul, ol {
-            list-style: none;
-        }
-
-        /* Tipografia moderna */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            color: #5a1e6d;
-        }
-
-        h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-        }
-
-        h3 {
-            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-        }
-
-        p {
-            margin-bottom: 1.5rem;
-            opacity: 0.9;
-            font-size: clamp(1rem, 1.1vw, 1.125rem);
-            line-height: 1.7;
-        }
-
-        .text-gradient {
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        /* Componentes reutilizáveis */
         .container {
-            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 20px;
         }
 
-        .section {
-            padding: 6rem 0;
+        /* Header e Navegação */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: var(--transition);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: rosybrown;
+            white-space: nowrap;
+        }
+
+        @media screen and (max-width: 768px) {
+            .logo-text {
+                display: none;
+            }
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--text-color);
+            margin: 3px 0;
+            transition: var(--transition);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            z-index: 2;
             position: relative;
         }
 
-        .section-title {
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .title-main {
+            display: block;
+            color: var(--dark-color);
+        }
+
+        .title-sub {
+            display: block;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-top: 0.5rem;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            margin-top: 15px;
+            border: 1px solid #ddd;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #25D366;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .whatsapp-btn i {
+            font-size: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .whatsapp-text {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-left: 5px;
+            color: var(--text-color);
+        }
+
+        @media screen and (max-width: 768px) {
+            .whatsapp-btn {
+                padding: 10px 15px;
+            }
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: var(--gradient-secondary);
+            color: var(--light-color);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--dark-color);
+            border: 2px solid var(--dark-color);
+        }
+
+        .btn-secondary:hover {
+            background: var(--dark-color);
+            color: var(--light-color);
+            transform: translateY(-3px);
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-img {
+            width: 80%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: var(--shadow-hover);
+            transition: var(--transition);
+        }
+
+        .hero-img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Elementos flutuantes */
+        .hero-decoration {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .element-1 {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .element-2 {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+
+        .element-3 {
+            width: 60px;
+            height: 60px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Seções gerais */
+        .section-header {
             text-align: center;
             margin-bottom: 4rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
             position: relative;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            bottom: -1rem;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            border-radius: var(--radius-full);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
         }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.875rem 2rem;
-            border-radius: var(--radius-full);
-            font-weight: 600;
-            font-size: 1rem;
-            transition: var(--transition);
-            white-space: nowrap;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: var(--white);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-            background-color: var(--primary);
-            opacity: 0.9;
-        }
-
-        .btn-secondary {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background-color: transparent;
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--primary-light);
-            transform: translateY(-3px);
-        }
-
-        .btn-whatsapp {
-            background-color: var(--whatsapp);
-            color: var(--white);
-        }
-
-        .btn-instagram {
-            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
-            color: var(--white);
-        }
-
-        .btn-facebook {
-            background-color: var(--facebook);
-            color: var(--white);
-        }
-
-        /* Header moderno com glass morphism */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1.5rem 0;
-            transition: var(--transition);
-            background-color: rgb(241, 229, 241);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        header.scrolled {
-            padding: 1rem 0;
-            box-shadow: var(--shadow-sm);
-            background-color: rgba(248, 250, 252, 0.95);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.75rem;
-            font-weight: 800;
-            color: var(--primary);
-        }
-
-        .logo span {
-            color: var(--secondary);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            position: relative;
-            font-weight: 600;
-            color: var(--dark);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            bottom: -4px;
-            left: 0;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            font-size: 1.5rem;
-            color: var(--primary);
-            z-index: 1001;
-        }
-
-        /* Hero section com efeito parallax - MODIFICADO */
-        .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background: linear-gradient(135deg, rgba(123, 74, 226, 0.1), rgba(255, 45, 85, 0.05));
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://i.ibb.co/Wbrpc91/Logotipo-Juracema-neumann.jpg') center/cover no-repeat fixed;
-            opacity: 0.9;
-            z-index: -1;
-        }
-
-        .hero-content {
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
             max-width: 600px;
-            position: relative;
-            z-index: 1;
-            background-color: rgba(255, 255, 255, 0.85);
-            padding: 2rem;
-            border-radius: var(--radius-lg);
+            margin: 0 auto;
         }
 
-        .hero h1 {
-            margin-bottom: 1.5rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 0.8s ease forwards 0.3s;
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            background: var(--light-color);
         }
 
-        .hero p {
-            font-size: 1.125rem;
-            margin-bottom: 2.5rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 0.8s ease forwards 0.5s;
-        }
-
-        .btn-container {
-            display: flex;
-            gap: 1rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeUp 0.8s ease forwards 0.7s;
-        }
-
-        .hero-image {
-            position: absolute;
-            right: 5%;
-            bottom: 10%;
-            width: 40%;
-            max-width: 500px;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-xl);
-            opacity: 0;
-            transform: translateY(10px);
-            animation: fadeUp 0.8s ease forwards 0.9s;
-            border: 8px solid var(--white);
-        }
-
-        /* Sobre */
         .about-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
 
         .about-text h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
             margin-bottom: 1.5rem;
-            color: var(--primary);
+            font-family: 'Dancing Script', cursive;
         }
 
-        .about-image {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            transform: translateX(-50px);
-            opacity: 0;
+        .about-text p {
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .about-features {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .feature i {
+            font-size: 1.2rem;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
             transition: var(--transition);
         }
 
-        .about-image img {
-            transition: var(--transition);
+        .about-img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-hover);
         }
 
-        .about-image:hover img {
-            transform: scale(1.05);
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+            background: var(--secondary-color);
         }
 
-        /* Galeria moderna com grid e hover effects */
-        .gallery-container {
+        .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .gallery-item {
             position: relative;
-            aspect-ratio: 1/1;
-            border-radius: var(--radius-md);
+            border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            transform: scale(0.95);
-            opacity: 0;
+            box-shadow: var(--shadow);
             transition: var(--transition);
+            cursor: pointer;
         }
 
-        .gallery-item img {
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .gallery-img {
             width: 100%;
-            height: 100%;
+            height: 300px;
             object-fit: cover;
             transition: var(--transition);
         }
 
-        .gallery-item:hover img {
+        .gallery-item:hover .gallery-img {
             transform: scale(1.1);
         }
 
-        .gallery-item-overlay {
+        .gallery-overlay {
             position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.8), transparent);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 1.5rem;
-            color: var(--white);
-            opacity: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: var(--light-color);
+            padding: 2rem;
+            transform: translateY(100%);
             transition: var(--transition);
         }
 
-        .gallery-item:hover .gallery-item-overlay {
-            opacity: 1;
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
         }
 
-        .gallery-item-overlay h3 {
-            font-size: 1.25rem;
+        .gallery-overlay h4 {
+            font-size: 1.2rem;
             margin-bottom: 0.5rem;
         }
 
-        /* Lightbox moderno - MODIFICADO PARA MOBILE */
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(15, 23, 42, 0.95);
-            z-index: 2000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: var(--transition);
-            touch-action: pan-y;
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: var(--light-color);
         }
 
-        .lightbox.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .lightbox-content {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            text-align: center;
-        }
-
-        .lightbox-content img {
-            max-height: 80vh;
-            border-radius: var(--radius-md);
-            box-shadow: var(--shadow-xl);
-            -webkit-user-drag: none;
-            user-select: none;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            color: var(--white);
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
-            background: rgba(0,0,0,0.5);
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 2001;
-        }
-
-        .lightbox-close:hover {
-            color: var(--secondary);
-            background: rgba(0,0,0,0.7);
-        }
-
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 1rem;
-            transform: translateY(-50%);
-        }
-
-        .lightbox-nav button {
-            width: 50px;
-            height: 50px;
-            border-radius: var(--radius-full);
-            background-color: rgba(255, 255, 255, 0.2);
-            color: var(--white);
-            font-size: 1.25rem;
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .lightbox-nav button:hover {
-            background-color: var(--primary);
-        }
-
-        /* Contato */
         .contact-content {
-            max-width: 800px;
-            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .contact-info {
+            max-width: 600px;
             text-align: center;
         }
 
-        .contact-buttons {
+        .contact-info p {
+            text-align: center;
+        }
+
+        .contact-methods {
+            align-items: center;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .contact-info p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--secondary-color);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .contact-method:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-method i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+
+        .contact-method h4 {
+            color: var(--dark-color);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-method p {
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        /* Form */
+        .form {
+            background: var(--secondary-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            background: var(--light-color);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.1);
+        }
+
+        .social-section {
+            padding: 60px 0;
+            background: var(--gradient-primary);
+            text-align: center;
+        }
+
+        .social-section h3 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            margin-bottom: 2rem;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .social-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
-            margin-top: 3rem;
         }
 
-        /* Rodapé moderno com onda SVG */
-        footer {
-            position: relative;
-            background: linear-gradient(135deg, var(--primary), var(--dark));
-            color: var(--white);
-            padding-top: 8rem;
-            overflow: hidden;
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 15px 25px;
+            background: var(--light-color);
+            color: var(--dark-color);
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
         }
 
-        .footer-wave {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' opacity='.25' fill='%23ffffff'/%3E%3Cpath d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z' fill='%23ffffff'/%3E%3C/svg%3E");
-            background-size: cover;
+        .social-link:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .social-link.whatsapp:hover {
+            background: #25D366;
+            color: var(--light-color);
+        }
+
+        .social-link.instagram:hover {
+            background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+            color: var(--light-color);
+        }
+
+        .social-link.facebook:hover {
+            background: #1877F2;
+            color: var(--light-color);
+        }
+
+        .social-link i {
+            font-size: 1.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: var(--light-color);
+            padding: 60px 0 20px;
         }
 
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            padding-bottom: 4rem;
-        }
-
-        .footer-col h3 {
-            position: relative;
+            gap: 2rem;
             margin-bottom: 2rem;
-            font-size: 1.5rem;
         }
 
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 3px;
-            background: var(--secondary);
-            bottom: -10px;
-            left: 0;
-        }
-
-        .footer-col p, .footer-col li {
+        .footer-logo {
+            height: 80px;
+            width: auto;
+            border-radius: 10px;
             margin-bottom: 1rem;
-            opacity: 0.9;
         }
 
-        .footer-links li {
-            margin-bottom: 0.75rem;
+        .footer-section h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
 
-        .footer-links a:hover {
-            color: var(--black);
+        .footer-section ul {
+            list-style: none;
         }
 
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
         }
 
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: var(--radius-full);
+        .footer-section ul li a {
+            color: var(--light-color);
+            text-decoration: none;
             transition: var(--transition);
         }
 
-        .social-links a:hover {
-            background-color: var(--secondary);
-            transform: translateY(-3px);
+        .footer-section ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-section p {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        .footer-section i {
+            color: var(--primary-color);
+            margin-right: 0.5rem;
         }
 
         .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 2rem;
             text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.875rem;
-            opacity: 0.8;
+            color: #cccccc;
+        }
+
+        .dev-credits {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .dev-credits a {
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .dev-credits a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        /* Modal melhorado */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: auto;
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 900px;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: var(--light-color);
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 2001;
+        }
+
+        .close:hover {
+            color: var(--primary-color);
+        }
+
+        #modalCaption {
+            text-align: center;
+            color: var(--light-color);
+            padding: 10px 0;
+            font-size: 1.2rem;
+            width: 100%;
+        }
+
+        /* Navegação do modal */
+        .modal-nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            padding: 0 20px;
+            pointer-events: none;
+        }
+
+        .modal-nav-btn {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: all;
+            transition: var(--transition);
+        }
+
+        .modal-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-nav-btn.prev {
+            left: 20px;
+        }
+
+        .modal-nav-btn.next {
+            right: 20px;
+        }
+
+        /* Responsividade */
+        @media screen and (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: var(--light-color);
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: var(--shadow);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .nav-menu li {
+                margin: 1rem 0;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .title-sub {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-features {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal-nav-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .hero-title {
+                font-size: 2rem;
+            }
+
+            .title-sub {
+                font-size: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .hero-img {
+                height: 300px;
+            }
+
+            .about-img {
+                height: 250px;
+            }
+
+            .gallery-img {
+                height: 250px;
+            }
         }
 
         /* Animações */
-        @keyframes fadeUp {
+        @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(20px);
+                transform: translateY(30px);
             }
             to {
                 opacity: 1;
@@ -632,1302 +978,520 @@
             }
         }
 
-        /* Efeitos de scroll */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: var(--transition);
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
         }
 
-        .animate-on-scroll.animated {
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Loading animation */
+        .loading {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease;
+        }
+
+        .loading.loaded {
             opacity: 1;
             transform: translateY(0);
         }
-
-        /* Responsividade */
-        @media (max-width: 1024px) {
-            .hero-image {
-                width: 45%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 300px;
-                height: 100vh;
-                background-color: var(--light);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 2rem;
-                transition: var(--transition);
-                box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.active {
-                right: 0;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .hero {
-                text-align: center;
-            }
-
-            .hero-content {
-                margin: 0 auto;
-                padding-top: 6rem;
-                background-color: rgba(255, 255, 255, 0.9);
-            }
-
-            .btn-container {
-                justify-content: center;
-            }
-
-            .hero-image {
-                position: relative;
-                right: auto;
-                bottom: auto;
-                width: 80%;
-                margin: 2rem auto 0;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .about-image {
-                order: -1;
-                margin: 0 auto;
-                max-width: 500px;
-            }
-
-            .contact-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .footer-col h3::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            .social-links {
-                justify-content: center;
-            }
-
-            /* Ajustes específicos para o lightbox no mobile */
-            .lightbox-content img {
-                max-height: 60vh;
-            }
-            
-            .lightbox-close {
-                top: 15px;
-                right: 15px;
-                font-size: 1.25rem;
-                width: 35px;
-                height: 35px;
-            }
-            
-            .lightbox-nav button {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-                position: fixed;
-                bottom: 20px;
-            }
-            
-            .lightbox-nav button:first-child {
-                left: 20px;
-            }
-            
-            .lightbox-nav button:last-child {
-                right: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .section {
-                padding: 4rem 0;
-            }
-
-            .btn-container {
-                flex-direction: column;
-            }
-
-            .gallery-container {
-                grid-template-columns: 1fr;
-            }
-
-            .lightbox-content img {
-                max-height: 50vh;
-            }
-        }
     </style>
-    
-    <!-- Fontes otimizadas -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cantinho das Bonecas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-    <!-- Cabeçalho -->
-    <header id="header">
-        <div class="container header-container">
-            <a href="#" class="logo">Cantinho<span>dasBonecas</span></a>
-            
-            <ul class="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#galeria">Galeria</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+              <div class="logo">
+                 <img src="https://i.ibb.co/Wbrpc91/Logotipo-Juracema-neumann.jpg" alt="Juracema Neumann" class="logo-img">
+                <span class="logo-text">JURACEMA NEUMANN</span>
+              </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Galeria</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contato</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
     </header>
-    
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Bonecas artesanais feitas com <span class="text-gradient">amor</span> e <span class="text-gradient">dedicação</span></h1>
-                <p>No Cantinho das Bonecas, cada criação é única e especial, feita à mão com materiais de alta qualidade para encantar crianças e colecionadores.</p>
-                <div class="btn-container">
-                    <a href="#galeria" class="btn btn-primary">
-                        <i class="fas fa-images"></i> Ver Trabalhos
-                    </a>
-                    <a href="#contato" class="btn btn-secondary">
-                        <i class="fas fa-shopping-cart"></i> Encomendar
-                    </a>
-                </div>
-            </div>
-            
-            <img src="https://i.ibb.co/Wbrpc91/Logotipo-Juracema-neumann.jpg" alt="Bonecas artesanais" class="hero-image" loading="lazy">
-        </div>
-    </section>
-    
-    <!-- Sobre -->
-    <section class="section" id="sobre">
-        <div class="container">
-            <h2 class="section-title">Sobre Nós</h2>
-            
-            <div class="about-content">
-                <div class="about-text animate-on-scroll">
-                    <h3>Transformando materiais em arte</h3>
-                   <p>No Cantinho das Bonecas, transformamos sonhos em arte através do trabalho artesanal. Cada boneca nasce da paixão em converter materiais simples em verdadeiros tesouros. Combinando técnicas tradicionais com um toque moderno, criamos peças únicas que encantam e perduram por gerações.
-Elaboradas completamente à mão, nossas bonecas recebem atenção especial em cada detalhe. Mais do que produtos, são criações com personalidade própria, onde linhas, tecidos e cores se unem para contar histórias emocionantes.
-Aqui, não criamos apenas bonecas; fazemos companheiras de vida, repletas de amor em cada ponto e costura.</p>
-                </div>
-                
-                <div class="about-image animate-on-scroll">
-                    <img src="https://i.ibb.co/M5S0zC6b/481292981-674252064948257-160081862649463446-n.jpg" alt="Cantinho das Bonecas" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Galeria -->
-    <section class="section gallery" id="galeria">
-        <div class="container">
-            <h2 class="section-title">Nossas Criações</h2>
-            
-            <div class="gallery-container">
-                <div class="gallery-item animate-on-scroll">
-                    <img src="https://i.ibb.co/gLd7dD6t/30442573-598707397153062-5100383516378529792-n.jpg" alt="Porta pano de prato" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h3>Porta pano de prato</h3>
-                        <p>Clique para ampliar</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item animate-on-scroll">
-                    <img src="https://i.ibb.co/KjFpm7xf/30442961-598707303819738-7578339634808094720-n.jpg" alt="Decoração para Sala ou banheiro" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h3>Decoração para Sala ou banheiro</h3>
-                        <p>Clique para ampliar</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item animate-on-scroll">
-                    <img src="https://i.ibb.co/KpdC7tfv/482221549-674252061614924-8977492383106295716-n.jpg" alt="Boneca com vestido vermelho" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h3>Boneca com vestido vermelho</h3>
-                        <p>Clique para ampliar</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item animate-on-scroll">
-                    <img src="https://i.ibb.co/jKHtWwZ/485003732-679816124391851-4956526791844160248-n.jpg" alt="Decorativo de ambientes" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h3>Decorativo de ambientes</h3>
-                        <p>Clique para ampliar</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item animate-on-scroll">
-                    <img src="https://i.ibb.co/3yGKtCxf/493312119-2457410647949385-7684119554330313541-n.jpg" alt="Decoração" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h3>Decoração</h3>
-                        <p>Clique para ampliar</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item animate-on-scroll">
-                    <img src="https://i.ibb.co/wNshvYMz/485168266-683798910660239-8731142173697960555-n.jpg" alt="Bonecas personalizadas" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h3>Bonecas personalizadas</h3>
-                        <p>Clique para ampliar</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item animate-on-scroll">
-                    <img src="https://i.ibb.co/DDXJhkMb/489697051-3026493494174229-8538385934559049708-n.jpg" alt="Decoração Natalina" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h3>Decoração de cozinha </h3>
-                        <p>Clique para ampliar</p>
-                    </div>
-                </div>
 
-                <div class="gallery-item animate-on-scroll">
-                    <img src="https://i.ibb.co/8gXJ5Gh4/485803172-683286077378189-2492603176058007886-n.jpg" alt="Decoração Natalina" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h3>Decoração Natalina</h3>
-                        <p>Clique para ampliar</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item animate-on-scroll">
-                    <img src="https://i.ibb.co/svGLg3zZ/489031429-3026288027528109-3033823443315993848-n.jpg" alt="Decoração para banheiros" loading="lazy">
-                    <div class="gallery-item-overlay">
-                        <h3>Decoração para banheiros</h3>
-                        <p>Clique para ampliar</p>
-                    </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-main">Cantinho das Bonecas</span>
+                    <span class="title-sub">Juracema Neumann</span>
+                </h1>
+                <p class="hero-description">
+                    Artesanatos e decoração únicos, feitos com amor e carinho. 
+                    Cada boneca é uma obra de arte especial, criada para encantar e emocionar.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#gallery" class="btn btn-primary">Ver Galeria</a>
                 </div>
             </div>
+            <div class="hero-image">
+                <img src="https://i.ibb.co/M5S0zC6b/481292981-674252064948257-160081862649463446-n.jpg" alt="Boneca Artesanal" class="hero-img">
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
         </div>
     </section>
-    
-    <!-- Lightbox -->
-    <div class="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <div class="lightbox-nav">
-            <button><i class="fas fa-chevron-left"></i></button>
-            <button><i class="fas fa-chevron-right"></i></button>
-        </div>
-        <div class="lightbox-content">
-            <img src="" alt="">
-        </div>
-    </div>
-    
-    <!-- Contato -->
-    <section class="section" id="contato">
+
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="contact-content">
-                <h2 class="section-title">Faça sua Encomenda</h2>
-                <h3>Entre em contato pelas redes sociais</h3>
-                
-                <div class="contact-buttons">
-                    <a href="https://wa.me/5541999256756" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                    
-                    <a href="https://www.instagram.com/juracemaneumann/" class="btn btn-instagram" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i> Instagram
-                    </a>
-                    
-                    <a href="https://www.facebook.com/profile.php?id=100070904088108" class="btn btn-facebook" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-facebook-f"></i> Facebook
-                    </a>
+            <div class="section-header">
+                <h2 class="section-title">Sobre Nós</h2>
+                <p class="section-subtitle">Conheça a história por trás de cada criação</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Juracema Neumann</h3>
+                    <p>
+                        Com anos de experiência em artesanato, Juracema Neumann dedica-se à criação de bonecas únicas 
+                        e peças decorativas especiais. Cada trabalho é feito com técnicas tradicionais e muito carinho, 
+                        resultando em peças que tocam o coração e despertam sorrisos.
+                    </p>
+                    <p>
+                        No Cantinho das Bonecas, acreditamos que cada criação tem sua própria personalidade e história. 
+                        Nossos artesanatos são perfeitos para decoração, presentes especiais ou para colecionadores 
+                        que apreciam o trabalho manual de qualidade.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <span>Feito com Amor</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-hand-holding-heart"></i>
+                            <span>Trabalho Artesanal</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <span>Qualidade Única</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.ibb.co/8gXJ5Gh4/485803172-683286077378189-2492603176058007886-n.jpg" alt="Decoração de natal" class="about-img">
                 </div>
             </div>
         </div>
     </section>
-    
-    <!-- Rodapé -->
-    <footer>
-        <div class="footer-wave"></div>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossa Galeria</h2>
+                <p class="section-subtitle">Conheça algumas de nossas criações especiais</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="bonecas">
+                    <img src="https://i.ibb.co/KpdC7tfv/482221549-674252061614924-8977492383106295716-n.jpg" alt="Boneca Rosa" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Boneca Elegante</h4>
+                        <p>Boneca artesanal com vestido rosa</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="bonecas">
+                    <img src="https://i.ibb.co/wNshvYMz/485168266-683798910660239-8731142173697960555-n.jpg" alt="Boneca Tradicional" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Boneca Tradicional</h4>
+                        <p>Estilo clássico e atemporal</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="bonecas">
+                    <img src="https://i.ibb.co/svGLg3zZ/489031429-3026288027528109-3033823443315993848-n.jpg" alt="Boneca Especial" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Boneca Especial</h4>
+                        <p>Decoração de banheiro</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="decoracao">
+                    <img src="https://i.ibb.co/3yGKtCxf/493312119-2457410647949385-7684119554330313541-n.jpg" alt="Decoração" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Decoração</h4>
+                        <p>Peças decorativas especiais</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="bonecas">
+                    <img src="https://i.ibb.co/KjFpm7xf/30442961-598707303819738-7578339634808094720-n.jpg" alt="Boneca Colorida" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Decoração de cozinha</h4>
+                        <p>Cores vibrantes e alegres</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="bonecas">
+                    <img src="https://i.ibb.co/gLd7dD6t/30442573-598707397153062-5100383516378529792-n.jpg" alt="Boneca Delicada" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Porta pano de prato</h4>
+                        <p>Decorado</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="decoracao">
+                    <img src="https://i.ibb.co/jKHtWwZ/485003732-679816124391851-4956526791844160248-n.jpg" alt="Artesanato" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Decoração de cozinha</h4>
+                        <p>Trabalho manual de qualidade</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="decoracao">
+                    <img src="https://i.ibb.co/9kZJbFTz/483520882-676249771415153-7035921259196385307-n.jpg" alt="Artesanato" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Casinha decorada</h4>
+                        <p>Decoração de ambiente</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="decoracao">
+                    <img src="https://i.ibb.co/8gXJ5Gh4/485803172-683286077378189-2492603176058007886-n.jpg" alt="Artesanato" class="gallery-img">
+                    <div class="gallery-overlay">
+                        <h4>Casinha de natal</h4>
+                        <p>Decoração de natal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-subtitle">Vamos conversar sobre sua próxima decoração especial</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Fale Conosco</h3>
+                    <p>
+                        Estamos sempre prontos para criar algo especial para você. 
+                        Entre em contato através do nosso WhatsApp.
+                    </p>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/5541999256756" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                            <span class="whatsapp-text"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-section">
+        <div class="container">
+            <h3>Siga-nos nas Redes Sociais</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/juracemaneumann/" class="social-link instagram" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100070904088108" class="social-link facebook" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                    <span>Facebook</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Cantinho das Bonecas</h3>
-                    <p>Bonecas artesanais feitas à mão com amor e dedicação. Cada peça conta uma história única.</p>
-                    
-                    <div class="social-links">
-                        <a href="https://wa.me/5541999256756" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/juracemaneumann/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/profile.php?id=100070904088108" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                    </div>
+                <div class="footer-section">
+                    <img src="https://i.ibb.co/Wbrpc91/Logotipo-Juracema-neumann.jpg" alt="Juracema Neumann Logo" class="footer-logo">
+                    <p>Cantinho das Bonecas - Artesanatos e decoração únicos, feitos com amor e carinho.</p>
                 </div>
-                
-                <div class="footer-col">
-                    <h3>Links Rápidos</h3>
-                    <ul class="footer-links">
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
                         <li><a href="#home">Início</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#galeria">Galeria</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#gallery">Galeria</a></li>
+                        <li><a href="#contact">Contato</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-col">
-                    <h3>Informações</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Colombo, Paraná</p>
-                    <p><i class="fas fa-phone"></i> (41) 99925-6756</p>
-                    <p><i class="fas fa-envelope"></i> ju.clbo@gmail.com </p>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fab fa-whatsapp"></i> (41) 99925-6756</p>
+                    <p><i class="fab fa-instagram"></i> @juracemaneumann</p>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; <span id="year"></span> Cantinho das Bonecas. Todos os direitos reservados.</p>
-                <P>Desenvolvido por <a href="https://portifoliogeovani.netlify.app/" target="_blank">Geovani Neumann</a></P>
+                <p class="copyright">&copy; 2025 Cantinho das Bonecas - Juracema Neumann. Todos os direitos reservados.</p>
+                <p class="dev-credits">Desenvolvido por <a href="https://portifoliogeovani.netlify.app/" target="_blank" class="dev-link">Geovani Neumann</a>.</p>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
-</body>
-</html>
 
-<style>
+    <!-- Modal for Gallery -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-nav">
+                <button class="modal-nav-btn prev">&lt;</button>
+                <button class="modal-nav-btn next">&gt;</button>
+            </div>
+            <img id="modalImage" src="" alt="">
+            <div id="modalCaption"></div>
+        </div>
+    </div>
 
-    
-/* Estilos Gerais */
-:root {
-    --primary-color: #ff69b4; /* Rosa */
-    --secondary-color: #8a2be2; /* Azul Violeta */
-    --text-color: #333;
-    --bg-color: #f8f8f8;
-    --white: #fff;
-    --light-gray: #eee;
-    --dark-gray: #555;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.section {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.section-title {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: var(--secondary-color);
-    position: relative;
-    display: inline-block;
-}
-
-.section-title::after {
-    content: '';
-    width: 80px;
-    height: 4px;
-    background-color: var(--primary-color);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
-    border-radius: 2px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin: 10px;
-}
-
-.btn-primary {
-    background-color: var(--primary-color);
-    color: var(--white);
-}
-
-.btn-primary:hover {
-    background-color: #e05cb0;
-    transform: translateY(-3px);
-}
-
-.btn-secondary {
-    background-color: var(--secondary-color);
-    color: var(--white);
-}
-
-.btn-secondary:hover {
-    background-color: #7a1fd0;
-    transform: translateY(-3px);
-}
-
-.text-gradient {
-    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-/* Cabeçalho */
-#header {
-    background-color: var(--white);
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: var(--secondary-color);
-    text-decoration: none;
-}
-
-.logo span {
-    color: var(--primary-color);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links li {
-    margin-left: 30px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-.mobile-menu-btn {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.8em;
-    color: var(--secondary-color);
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(to right, #ffe6f2, #e6f2ff);
-    padding: 150px 0 80px;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.hero-content {
-    flex: 1;
-    min-width: 300px;
-    margin-right: 40px;
-}
-
-.hero-content h1 {
-    font-size: 3.5em;
-    margin-bottom: 20px;
-    line-height: 1.2;
-    color: var(--dark-gray);
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-    color: var(--text-color);
-}
-
-.hero-image {
-    flex: 1;
-    min-width: 300px;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.5s ease;
-}
-
-.hero-image:hover {
-    transform: scale(1.03);
-}
-
-/* Sobre Nós Section */
-#sobre {
-    background-color: var(--white);
-}
-
-.about-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    text-align: left;
-}
-
-.about-text {
-    flex: 1;
-    min-width: 300px;
-    max-width: 600px;
-}
-
-.about-text h3 {
-    font-size: 2em;
-    color: var(--secondary-color);
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    color: var(--dark-gray);
-}
-
-.about-image {
-    flex: 1;
-    min-width: 300px;
-    max-width: 450px;
-}
-
-.about-image img {
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.5s ease;
-}
-
-.about-image img:hover {
-    transform: scale(1.03);
-}
-
-/* Galeria Section */
-#galeria {
-    background-color: var(--light-gray);
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
-}
-
-.gallery-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-    transform: translateY(-5px);
-}
-
-.gallery-item img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.05);
-}
-
-.gallery-item-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 105, 180, 0.7);
-    color: var(--white);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover .gallery-item-overlay {
-    opacity: 1;
-}
-
-.gallery-item-overlay h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.gallery-item-overlay p {
-    font-size: 0.9em;
-}
-
-/* Lightbox */
-.lightbox {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-.lightbox-content {
-    margin: auto;
-    display: block;
-    max-width: 80%;
-    max-height: 80%;
-    border-radius: 10px;
-}
-
-.lightbox-content img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 35px;
-    color: #fff;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.lightbox-close:hover,
-.lightbox-close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.lightbox-nav button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    font-size: 2em;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.lightbox-nav button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.lightbox-nav button:first-child {
-    left: 20px;
-}
-
-.lightbox-nav button:last-child {
-    right: 20px;
-}
-
-/* Contato Section */
-#contato {
-    background-color: var(--white);
-}
-
-.contact-content {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.contact-content h3 {
-    font-size: 1.8em;
-    color: var(--text-color);
-    margin-bottom: 30px;
-}
-
-.contact-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.btn-whatsapp {
-    background-color: #25D366;
-    color: var(--white);
-}
-
-.btn-whatsapp:hover {
-    background-color: #1DA851;
-}
-
-.btn-instagram {
-    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
-    color: var(--white);
-}
-
-.btn-instagram:hover {
-    opacity: 0.9;
-}
-
-.btn-facebook {
-    background-color: #1877F2;
-    color: var(--white);
-}
-
-.btn-facebook:hover {
-    background-color: #145CB3;
-}
-
-.contact-buttons i {
-    margin-right: 10px;
-}
-
-/* Rodapé */
-footer {
-    background-color: var(--secondary-color);
-    color: var(--white);
-    padding: 60px 0 20px;
-    position: relative;
-    overflow: hidden;
-}
-
-.footer-wave {
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg"><path fill="%238a2be2" fill-opacity="1" d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>') no-repeat center bottom;
-    background-size: cover;
-    opacity: 0.2;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin-bottom: 40px;
-}
-
-.footer-col {
-    flex: 1;
-    min-width: 250px;
-    text-align: left;
-}
-
-.footer-col h3 {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    color: var(--primary-color);
-}
-
-.footer-col p {
-    font-size: 0.95em;
-    margin-bottom: 15px;
-}
-
-.footer-col .social-links a {
-    color: var(--white);
-    font-size: 1.5em;
-    margin-right: 15px;
-    transition: color 0.3s ease;
-}
-
-.footer-col .social-links a:hover {
-    color: var(--primary-color);
-}
-
-.footer-links {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: var(--primary-color);
-}
-
-.footer-col p i {
-    margin-right: 10px;
-    color: var(--primary-color);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    font-size: 0.9em;
-}
-
-.footer-bottom a {
-    color: var(--white);
-    text-decoration: none;
-}
-
-.footer-bottom a:hover {
-    text-decoration: underline;
-}
-
-/* Animações */
-.animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animate-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: var(--white);
-        position: absolute;
-        top: 70px;
-        left: 0;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        margin: 0;
-        border-bottom: 1px solid var(--light-gray);
-    }
-
-    .nav-links a {
-        display: block;
-        padding: 15px 20px;
-    }
-
-    .mobile-menu-btn {
-        display: block;
-    }
-
-    .hero .container {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .hero-content {
-        margin-right: 0;
-        margin-top: 40px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-
-    .hero-content p {
-        font-size: 1em;
-    }
-
-    .about-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text, .about-image {
-        max-width: 100%;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-col {
-        min-width: unset;
-        width: 100%;
-        margin-bottom: 30px;
-    }
-
-    .footer-col .social-links {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .section {
-        padding: 50px 0;
-    }
-
-    .section-title {
-        font-size: 2em;
-    }
-
-    .hero-content h1 {
-        font-size: 2em;
-    }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.9em;
-    }
-
-    .contact-buttons {
-        flex-direction: column;
-    }
-}
-
-
-
-</style>
-<script>
-
-    document.addEventListener("DOMContentLoaded", function() {
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-    const navLinks = document.querySelector(".nav-links");
-
-    if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener("click", function() {
-            navLinks.classList.toggle("active");
-        });
-    }
-
-    // Smooth Scrolling for Navigation Links
-    document.querySelectorAll(".nav-links a").forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - (document.querySelector("#header") ? document.querySelector("#header").offsetHeight : 0),
-                    behavior: "smooth"
-                });
-                // Close mobile menu after clicking a link
-                if (navLinks.classList.contains("active")) {
-                    navLinks.classList.remove("active");
-                }
-            }
-        });
-    });
-
-    // Animate on Scroll
-    const animateOnScrollElements = document.querySelectorAll(".animate-on-scroll");
-
-    const observerOptions = {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("is-visible");
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    animateOnScrollElements.forEach(element => {
-        observer.observe(element);
-    });
-
-    // Lightbox Functionality
-    const galleryItems = document.querySelectorAll(".gallery-item");
-    const lightbox = document.querySelector(".lightbox");
-    const lightboxContent = document.querySelector(".lightbox-content img");
-    const lightboxClose = document.querySelector(".lightbox-close");
-    const prevBtn = document.querySelector(".lightbox-nav button:first-child");
-    const nextBtn = document.querySelector(".lightbox-nav button:last-child");
-    let currentIndex = 0;
-
-    galleryItems.forEach((item, index) => {
-        item.addEventListener("click", () => {
-            currentIndex = index;
-            showImage(currentIndex);
-        });
-    });
-
-    lightboxClose.addEventListener("click", () => {
-        lightbox.style.display = "none";
-    });
-
-    prevBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex > 0) ? currentIndex - 1 : galleryItems.length - 1;
-        showImage(currentIndex);
-    });
-
-    nextBtn.addEventListener("click", () => {
-        currentIndex = (currentIndex < galleryItems.length - 1) ? currentIndex + 1 : 0;
-        showImage(currentIndex);
-    });
-
-    function showImage(index) {
-        const imageUrl = galleryItems[index].querySelector("img").src;
-        lightboxContent.src = imageUrl;
-        lightbox.style.display = "flex";
-    }
-
-    // Update current year in footer
-    const yearSpan = document.getElementById("year");
-    if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-    }
-});
-
-
-
-</script>   
-    
-    <!-- Scripts otimizados -->
     <script>
-        // Menu Mobile
-        const menuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
-        const header = document.getElementById('header');
-        
-        menuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            menuBtn.innerHTML = navLinks.classList.contains('active') 
-                ? '<i class="fas fa-times"></i>' 
-                : '<i class="fas fa-bars"></i>';
-        });
-        
-        // Header Scroll Effect
-        window.addEventListener('scroll', () => {
-            header.classList.toggle('scrolled', window.scrollY > 100);
-        });
-        
-        // Animações ao rolar
-        const animateElements = () => {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            const windowHeight = window.innerHeight;
-            const triggerPoint = windowHeight * 0.85;
+        // Aguardar carregamento do DOM
+        document.addEventListener('DOMContentLoaded', function() {
             
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                
-                if (elementTop < triggerPoint) {
-                    element.classList.add('animated');
-                }
-            });
-        };
-        
-        // Lightbox Galeria - VERSÃO CORRIGIDA PARA MOBILE
-        const initLightbox = () => {
+            // Elementos do DOM
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const header = document.querySelector('.header');
             const galleryItems = document.querySelectorAll('.gallery-item');
-            const lightbox = document.querySelector('.lightbox');
-            const lightboxImg = document.querySelector('.lightbox-content img');
-            const lightboxClose = document.querySelector('.lightbox-close');
-            const lightboxPrev = document.querySelector('.lightbox-nav button:first-child');
-            const lightboxNext = document.querySelector('.lightbox-nav button:last-child');
+            const modal = document.getElementById('galleryModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalCaption = document.getElementById('modalCaption');
+            const closeModal = document.querySelector('.close');
+            const prevBtn = document.querySelector('.modal-nav-btn.prev');
+            const nextBtn = document.querySelector('.modal-nav-btn.next');
             
-            let currentImageIndex = 0;
-            const images = Array.from(galleryItems).map(item => 
-                item.querySelector('img').src
-            );
-            
-            // Função para mostrar imagem atual
-            const showImage = (index) => {
-                currentImageIndex = index;
-                lightboxImg.src = images[currentImageIndex];
-                lightbox.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            };
-            
-            // Adiciona evento de clique aos itens da galeria
-            galleryItems.forEach((item, index) => {
-                item.addEventListener('click', () => {
-                    showImage(index);
+            // Menu Mobile Toggle
+            function toggleMobileMenu() {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+            }
+
+            // Event listeners para menu mobile
+            if (hamburger) {
+                hamburger.addEventListener('click', toggleMobileMenu);
+            }
+
+            // Fechar menu ao clicar em um link
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navMenu.classList.remove('active');
+                    document.body.classList.remove('menu-open');
                 });
             });
-            
-            // Função para fechar o lightbox
-            const closeLightbox = () => {
-                lightbox.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            };
-            
-            // Função para mostrar imagem anterior
-            const showPrevImage = () => {
-                currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-                lightboxImg.src = images[currentImageIndex];
-            };
-            
-            // Função para mostrar próxima imagem
-            const showNextImage = () => {
-                currentImageIndex = (currentImageIndex + 1) % images.length;
-                lightboxImg.src = images[currentImageIndex];
-            };
-            
-            // Event listeners
-            lightboxClose.addEventListener('click', closeLightbox);
-            lightboxPrev.addEventListener('click', showPrevImage);
-            lightboxNext.addEventListener('click', showNextImage);
-            
-            // Fechar ao clicar fora da imagem
-            lightbox.addEventListener('click', (e) => {
-                if (e.target === lightbox) {
-                    closeLightbox();
-                }
-            });
-            
-            // Navegação por teclado
-            document.addEventListener('keydown', (e) => {
-                if (!lightbox.classList.contains('active')) return;
-                
-                switch(e.key) {
-                    case 'Escape':
-                        closeLightbox();
-                        break;
-                    case 'ArrowLeft':
-                        showPrevImage();
-                        break;
-                    case 'ArrowRight':
-                        showNextImage();
-                        break;
-                }
-            });
-            
-            // Navegação por swipe em dispositivos touch
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            lightbox.addEventListener('touchstart', (e) => {
-                touchStartX = e.changedTouches[0].screenX;
-            }, {passive: true});
-            
-            lightbox.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].screenX;
-                handleSwipe();
-            }, {passive: true});
-            
-            const handleSwipe = () => {
-                if (!lightbox.classList.contains('active')) return;
-                
-                const difference = touchStartX - touchEndX;
-                if (difference > 50) { // Swipe para esquerda
-                    showNextImage();
-                } else if (difference < -50) { // Swipe para direita
-                    showPrevImage();
-                }
-            };
-        };
 
-        // Atualizar ano no footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Inicializar tudo quando o DOM estiver pronto
-        document.addEventListener('DOMContentLoaded', () => {
-            animateElements();
-            initLightbox();
-            
-            // Observar elementos para animação ao rolar
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animated');
+            // Header scroll effect
+            function handleScroll() {
+                const scrollTop = window.pageYOffset;
+                
+                if (scrollTop > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.15)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+                }
+            }
+
+            window.addEventListener('scroll', handleScroll);
+
+            // Smooth scroll para links internos
+            function smoothScroll() {
+                const links = document.querySelectorAll('a[href^="#"]');
+                
+                links.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        const targetId = this.getAttribute('href');
+                        const targetSection = document.querySelector(targetId);
+                        
+                        if (targetSection) {
+                            const headerHeight = header.offsetHeight;
+                            const targetPosition = targetSection.offsetTop - headerHeight;
+                            
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    });
+                });
+            }
+
+            smoothScroll();
+
+            // Modal da Galeria melhorado
+            function initGalleryModal() {
+                const galleryImages = Array.from(document.querySelectorAll('.gallery-img'));
+                let currentIndex = 0;
+
+                function showModal(index) {
+                    const img = galleryImages[index];
+                    const item = img.closest('.gallery-item');
+                    const overlay = item.querySelector('.gallery-overlay');
+                    
+                    if (img && modal) {
+                        modal.style.display = 'block';
+                        modalImg.src = img.src;
+                        modalImg.alt = img.alt;
+                        currentIndex = index;
+                        
+                        if (overlay) {
+                            const title = overlay.querySelector('h4');
+                            const description = overlay.querySelector('p');
+                            modalCaption.innerHTML = `
+                                <h3>${title ? title.textContent : ''}</h3>
+                                <p>${description ? description.textContent : ''}</p>
+                            `;
+                        }
+                        
+                        document.body.style.overflow = 'hidden'; // Impede rolagem da página
+                    }
+                }
+
+                galleryItems.forEach((item, index) => {
+                    item.addEventListener('click', () => {
+                        showModal(index);
+                    });
+                });
+
+                // Fechar modal
+                function closeGalleryModal() {
+                    if (modal) {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto'; // Restaura rolagem da página
+                    }
+                }
+
+                // Navegação entre imagens
+                function navigate(direction) {
+                    if (direction === 'prev') {
+                        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+                    } else {
+                        currentIndex = (currentIndex + 1) % galleryImages.length;
+                    }
+                    showModal(currentIndex);
+                }
+
+                // Event listeners
+                if (closeModal) {
+                    closeModal.addEventListener('click', closeGalleryModal);
+                }
+
+                prevBtn.addEventListener('click', () => navigate('prev'));
+                nextBtn.addEventListener('click', () => navigate('next'));
+
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        closeGalleryModal();
                     }
                 });
-            }, {
-                threshold: 0.1
+
+                // Fechar modal com ESC
+                document.addEventListener('keydown', function(e) {
+                    if (modal.style.display === 'block') {
+                        if (e.key === 'Escape') {
+                            closeGalleryModal();
+                        } else if (e.key === 'ArrowLeft') {
+                            navigate('prev');
+                        } else if (e.key === 'ArrowRight') {
+                            navigate('next');
+                        }
+                    }
+                });
+            }
+
+            initGalleryModal();
+
+            // Botão de voltar ao topo
+            function initBackToTop() {
+                const backToTopBtn = document.createElement("button");
+                backToTopBtn.innerHTML = "<i class=\"fas fa-arrow-up\"></i>";
+                backToTopBtn.className = "back-to-top";
+                backToTopBtn.style.cssText = `
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    width: 50px;
+                    height: 50px;
+                    background: var(--gradient-primary);
+                    border: none;
+                    border-radius: 50%;
+                    color: white;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.3s ease;
+                    z-index: 1000;
+                    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+                `;
+
+                document.body.appendChild(backToTopBtn);
+
+                // Mostrar/esconder botão baseado no scroll
+                window.addEventListener("scroll", () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopBtn.style.opacity = "1";
+                        backToTopBtn.style.visibility = "visible";
+                    } else {
+                        backToTopBtn.style.opacity = "0";
+                        backToTopBtn.style.visibility = "hidden";
+                    }
+                });
+
+                // Scroll suave para o topo
+                backToTopBtn.addEventListener("click", () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                });
+
+                // Hover effect
+                backToTopBtn.addEventListener("mouseenter", () => {
+                    backToTopBtn.style.transform = "scale(1.1)";
+                });
+
+                backToTopBtn.addEventListener("mouseleave", () => {
+                    backToTopBtn.style.transform = "scale(1)";
+                });
+            }
+
+            initBackToTop();
+
+            // Redimensionamento da janela
+            window.addEventListener("resize", () => {
+                // Fechar menu mobile se a tela ficar grande
+                if (window.innerWidth > 768) {
+                    hamburger.classList.remove("active");
+                    navMenu.classList.remove("active");
+                    document.body.classList.remove("menu-open");
+                }
             });
-            
-            document.querySelectorAll('.animate-on-scroll').forEach(el => {
-                observer.observe(el);
-            });
+
+            console.log("🎀 Cantinho das Bonecas - Site carregado com sucesso!");
         });
-        
-        // Disparar animações ao rolar
-        window.addEventListener('scroll', animateElements);
     </script>
 </body>
 </html>
